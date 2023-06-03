@@ -15,5 +15,11 @@
     "bugs": {
         "url": "https://github.com/rmonaghanjr/ryanmonaghan-dev/issues"
     },
-    "homepage": "https://github.com/rmonaghanjr/ryanmonaghan-dev#readme"
+    "homepage": "https://github.com/rmonaghanjr/ryanmonaghan-dev#readme",
+    "devDependencies": {
+        "tailwindcss": "^3.3.2"
+    },
+    "dependencies": {
+        "htmx.org": "^1.9.2"
+    }
 }

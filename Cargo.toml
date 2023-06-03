@@ -1,0 +1,32 @@
+[package]
+name = "ryanmonaghan-dev"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde_json = "1.0"
+rustube = "0.6.0"
+dotenv = "0.15.0"
+
+[dependencies.rocket]
+rocket = "=0.5.0-rc.3"
+features = ["json"]
+
+[dependencies.rocket_contrib]
+version = "0.4.11"
+default-features = false
+features = ["json"]
+
+[dependencies.serde]
+version = "1.0.163"
+features = ["derive"]
+
+[dependencies.mongodb]
+version = "2.5.0"
+
+[dependencies.rocket_db_pools]
+version = "=0.1.0-rc.3"
+default-features = false
+features = ["mongodb"]
