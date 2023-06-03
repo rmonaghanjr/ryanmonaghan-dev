@@ -1,15 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        "./html/**/*.{html,js}",
+        "./views/**/*.{html,js}",
     ],
     theme: {
-        colors: {
-            
+        extend: {
+            colors: {
+                "violet": "#4e4187",
+                "blue": "#3083dc",
+                "yellow": "#f8ffe5",
+                "green": "#7dde92",
+                "cyan": "2ebfa5"
+            },
+            fontFamily: {
+                sans: ['Roboto Mono', 'sans-serif'],
+                serif: ['Roboto Slab', 'serif']
+            }
         },
-        fontFamily: {
-            
-        }
     },
     plugins: [],
 }

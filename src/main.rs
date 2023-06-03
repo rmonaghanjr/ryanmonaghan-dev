@@ -2,13 +2,16 @@
 
 #[macro_use] extern crate rocket;
 
+mod utilities;
+
+use utilities::get_view;
 use std::fs;
 use rocket::response::content::RawHtml;
 use rocket::fs::FileServer;
 
 #[get("/")]
 fn index() -> RawHtml<String> {
-    let contents = fs::read_to_string("./html/views/index.html")
+    let contents = fs::read_to_string(get_view("index"))
         .expect("readable");
     return RawHtml(contents);
 }

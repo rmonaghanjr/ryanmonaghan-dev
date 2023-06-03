@@ -1,5 +1,5 @@
 # ryanmonaghan-dev
-A personal site using Rust and Tailwind.
+A personal site using Rust, htmx, and Sass.
 
 # coolors
 - https://coolors.co/f1e0c5-c9b79c-71816d-342a21-da667b

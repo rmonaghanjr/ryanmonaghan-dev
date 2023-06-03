@@ -5,7 +5,7 @@
     "main": "src/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "pnpm exec tailwindcss -i ./static/css/index.css -o ./static/css/index.compiled.css && cargo run"
+        "start": "sass styles/index.scss static/css/index.css && cargo run"
     },
     "repository": {
         "type": "git",
@@ -17,9 +17,6 @@
         "url": "https://github.com/rmonaghanjr/ryanmonaghan-dev/issues"
     },
     "homepage": "https://github.com/rmonaghanjr/ryanmonaghan-dev#readme",
-    "devDependencies": {
-        "tailwindcss": "^3.3.2"
-    },
     "dependencies": {
         "htmx.org": "^1.9.2"
     }
