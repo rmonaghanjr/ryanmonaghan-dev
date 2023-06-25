@@ -20,5 +20,5 @@ fn index() -> RawHtml<String> {
 fn rocket() -> _ {
     rocket::build()
         .mount("/", routes![index])
-        .mount("/public", FileServer::from("./static"))
+        .mount("/public", FileServer::from("./client/static"))
 }

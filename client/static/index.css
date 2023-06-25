@@ -1,0 +1,65 @@
+/*
+ * font-family: Univers,-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+ * */
+
+* {
+    font-family: Univers,-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+}
+
+html {
+    padding: 0px;
+}
+
+hr {
+    color: black;
+}
+
+.column-small {
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    width: 12em;
+}
+
+.column-large {
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    width: 25em;
+}
+
+@media only screen and (max-width: 600px) {
+    .column-small {
+        display: inline-block;
+        margin: 0;
+        overflow: hidden;
+        width: 8em;
+    }
+
+    .column-large {
+        display: inline-block;
+        margin: 0;
+        overflow: hidden;
+        width: 15em;
+    }
+}
+
+
+.heading {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.breadcrumbs {
+    font-size: 18px;
+}
+
+.breadcrumbs a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
