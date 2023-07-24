@@ -3,4 +3,6 @@
 # javascript
 /node_modules
 
-/static/images/
+/static
+
+.env

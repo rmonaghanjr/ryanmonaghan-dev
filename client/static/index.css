@@ -1,65 +1,122 @@
-/*
- * font-family: Univers,-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+/* this is the container for the navigation and content. navigation and content area
+ * navigation and content are displayed side by side, with navigation on the left and content on the right 
+ * navigation is about 20% of the width of the screen, content is about 80% of the width of the screen
+ * navigation should be sticky and content should be able to scroll
+ * 
+ *  color theme: #124e78 #f0f0c9 #f2bb05 #d74e09 #6e0e0a
  * */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
 
-* {
-    font-family: Univers,-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
-}
-
-html {
-    padding: 0px;
-}
-
-hr {
-    color: black;
-}
-
-.column-small {
-    display: inline-block;
+html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
-    overflow: hidden;
-    width: 12em;
+    padding: 0;
 }
 
-.column-large {
-    display: inline-block;
+.main {
+    width: 100%;
+    height: 100%;
     margin: 0;
+    padding: 0;
+    background-color: #f0f0c9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    width: 25em;
 }
 
-@media only screen and (max-width: 600px) {
-    .column-small {
-        display: inline-block;
-        margin: 0;
-        overflow: hidden;
-        width: 8em;
-    }
-
-    .column-large {
-        display: inline-block;
-        margin: 0;
-        overflow: hidden;
-        width: 15em;
-    }
+.navbar {
+    width: 20%;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: #124e78;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.heading {
-    font-weight: bold;
-    font-size: 18px;
+.content {
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0c9;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    overflow-y: scroll;
 }
 
-a:visited {
+.nav-title {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 30px;
+    color: #f0f0c9;
+    margin: 10px;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.nav-list {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 20px;
+    color: #f0f0c9;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav-list li a {
+    color: #f0f0c9;
     text-decoration: none;
 }
 
-.breadcrumbs {
-    font-size: 18px;
+.nav-list li a:hover {
+    color: #f0f0c9;
+    text-decoration: underline;
 }
 
-.breadcrumbs a {
-    padding-left: 10px;
-    padding-right: 10px;
+.socials-row {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials-row a img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 0;
+    transition-duration: 0.1s;
+}
+
+.socials-row a img:hover {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    padding: 0;
+    transition-duration: 0.1s;
+}
+
+.content-title {
+    text-decoration: underline;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.content p {
+    margin: 0;
+    padding: 0;
 }
 
