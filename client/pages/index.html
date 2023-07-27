@@ -2,29 +2,32 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta description="Welcome to my website! I'll post blog posts, projects, and other things here.">
+        <meta name=”robots” content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ryan Monaghan</title>
         <link rel="stylesheet" href="/public/index.css">
+
+        <script src="/public/htmx.min.js"></script>
     </head>
     <body>
         <div class="main">
             <div class="navbar">
-               <h3 class="nav-title">Ryan Monaghan</h3>
+                <h3 class="nav-title">Ryan Monaghan</h3>
 
-               <ul class="nav-list">
-                   <li class="nav-item"><a href="/about">About Me</a></li>
-                   <li class="nav-item"><a href="/projects">Projects</a></li>
-                   <li class="nav-item"><a href="/contact">Contact</a></li>
-                   <li class="nav-item"><a href="/resume">Resume</a></li>
-               </ul>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="/blog">Blog</a></li>
+                    <li class="nav-item"><a href="/resume">Resume</a></li>
+                </ul>
 
-               <div class="socials-row">
-                   <a href="https://github.com/rmonaghanjr"><img src="/public/images/github.png" alt="Github"></a>
-                   <a href="https://www.twitter.com/rmonaghanjr"><img src="/public/images/twitter.png" alt="Twitter"></a>
-               </div>
+                <div class="socials-row">
+                    <a href="https://github.com/rmonaghanjr"><img src="/public/images/github.png" alt="Github"></a>
+                    <a href="https://www.twitter.com/rmonaghanjr"><img src="/public/images/twitter.png" alt="Twitter"></a>
+                </div>
             </div>
             <div class="content">
                 <h1 class="content-title">Ryan Monaghan</h1> 
-                <p>
+                <div>
                     I'm really into creating performant code, creating cool projects, and pusing the boudaries of what I can do as a developer. Ultimately, I'm just someone looking to create awesome software for awesome people.
 
                     <h3 class="content-title">Fun Facts About Me</h3>
@@ -34,7 +37,22 @@
                         <li>My favorite language is either C or Rust</li>
                         <li>I'm a CA for CS 382 at Stevens Institute of Technology</li>
                     </ul>
-                </p>
+                </div>
+                <div>
+                    <h3 class="content-title">Projects</h3>
+                    <ul>
+                        <li><a href="https://github.com/rmonaghanjr/project-atlas">project-atlas</a>: Firmware for a submarine I am working on...will be replaced with FreeRTOS eventually.</li>
+                        <li><a href="https://github.com/rmonaghanjr/cmd-play">cmd-play</a>: An ascii video player written in C using FFMPEG.</li>
+                        <li><a href="https://github.com/rmonaghanjr/experiments">experiments</a>: Various little microbenchmarks or fun programs I write when I get bored.</li>
+                    </ul>
+                    <p>As always, feel free to browse my <a href="https://github.com/rmonaghanjr/">GitHub</a> for more abandoned projects and other fun things.</p>
+                </div>
+                <div>
+                    <h3 class="content-title">Blog Posts</h3>
+                    <div hx-get="/recent-posts?limit=3" hx-trigger="load">
+                        <p>Loading recent posts...</p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
